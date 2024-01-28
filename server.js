@@ -10,9 +10,17 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/chatapp', {
+const MONGODB_URI = 'mongodb+srv://priya:<password>@cluster0.zn7agvm.mongodb.net/?retryWrites=true&w=majority';
+
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB database');
 });
 
 // Routes
@@ -22,3 +30,4 @@ mongoose.connect('mongodb://localhost:27017/chatapp', {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
