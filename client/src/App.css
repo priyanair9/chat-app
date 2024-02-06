@@ -36,3 +36,50 @@
     transform: rotate(360deg);
   }
 }
+
+/* Style for the form container */
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3e5f5; /* Purple lighten-5 */
+  border-radius: 8px;
+  text-align: center; /* Center the text within the form container */
+}
+
+/* Style for form inputs */
+.register-form input {
+  width: calc(100% - 22px); /* Adjust input width */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #9c27b0; /* Purple */
+  border-radius: 5px;
+}
+
+/* Style for form input placeholders */
+.register-form input::placeholder {
+  color: #9c27b0; /* Purple */
+}
+
+/* Style for form input focus */
+.register-form input:focus {
+  outline: none;
+  border-color: #4a148c; /* Purple darken-4 */
+}
+
+/* Style for submit button */
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #9c27b0; /* Purple */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for submit button hover */
+.register-form button:hover {
+  background-color: #4a148c; /* Purple darken-4 */
+  transition: .5s;
+}
