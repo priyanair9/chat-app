@@ -25,6 +25,37 @@ db.once('open', () => {
 
 // Routes
 // Add routes for authentication, user registration, and chat
+const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+  
+  app.post('/register', async (req, res) => {
+    try {
+      const { email, username, password } = req.body;
+  
+      // Generate random color
+      const profileColor = getRandomColor();
+  
+      const newUser = new User({
+        email,
+        username,
+        password,
+        profileColor, // Assign the random color
+      });
+  
+      const savedUser = await newUser.save();
+      res.status(201).json(savedUser);
+    } catch (error) {
+      console.error('Error registering user:', error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  });
+
 
 // Start server
 app.listen(PORT, () => {
