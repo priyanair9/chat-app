@@ -2,29 +2,29 @@ import React from 'react';
 
 function ChatsPage(props) {
     return (
-        <div class="chat-container">
+        <div className="chat-container">
         {/* Sidebar for chats */}
-        <div class="sidebar">
-          <div class="search-bar">
+        <div className="sidebar">
+          <div className="search-bar">
             <input type="text" placeholder="Search chats"></input>
           </div>
-          <div class="chat-list">
+          <div className="chat-list">
             {/*  List of chats */}
             {/* <!-- Each chat item should contain profile picture, name, last message, etc. --> */}
           </div>
         </div>
         {/* <!-- Main chat area --> */}
-        <div class="chat-area">
+        <div className="chat-area">
           {/* <!-- Chat header with user details --> */}
-          <div class="chat-header">
+          <div className="chat-header">
             {/* <!-- Display user's profile picture, name, status, etc. --> */}
           </div>
           {/* <!-- Chat messages --> */}
-          <div class="messages">
+          <div className="messages">
             {/* <!-- Individual message bubbles --> */}
           </div>
           {/* <!-- Message input area --> */}
-          <div class="message-input">
+          <div className="message-input">
             <textarea placeholder="Type your message..."></textarea>
             <button>Send</button>
           </div>
