@@ -19,7 +19,7 @@ app.use(cors({
 }));
 
 // MongoDB connection
-const MONGODB_URI = 'mongodb+srv://priya:priya@cluster0.zn7agvm.mongodb.net/?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URL
 
 mongoose.connect(MONGODB_URI);
 
