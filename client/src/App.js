@@ -1,12 +1,13 @@
 import './App.css';
 
-// import RegisterPage from './pages/RegisterPage';
-import ChatsPage from './pages/ChatsPage';
+import RegisterPage from './pages/RegisterPage';
+// import ChatsPage from './pages/ChatsPage';
+// import ChatCard from './components/ChatCard';
 
 function App() {
   return (
     <div className="App">
-      <ChatsPage/>
+      <RegisterPage/>
     </div>
   );
 }

@@ -8,19 +8,27 @@ function RegisterPage(props) {
         password: '',
     });
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+    const handleChange = (event) => {
+        const{name, value} = event.target
+        setFormData(prevInput => {
+            return {
+                ...prevInput,
+                [name]: value
+            }
+        })
     };
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-          const response = await axios.post('http://localhost:5000/register', formData);
-          console.log('User registered successfully:', response.data);
-        } catch (error) {
-          console.error('Error registering user:', error.response.data.message);
+        const newUser = {
+            email: formData.email,
+            username: formData.username,
+            password: formData.password,
         }
+        axios.post('http://localhost:3001/register', newUser)
     };
+
+    
 
     return (
         <div>
