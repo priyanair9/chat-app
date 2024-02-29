@@ -9,6 +9,7 @@ function LoginPage(props) {
                 <input type="password" name="password" size="30" placeholder="Password"></input>
                 <button>Login</button>
             </form>
+            <p>Don't have an account?<div>Register</div></p>
         </div>
     );
 }

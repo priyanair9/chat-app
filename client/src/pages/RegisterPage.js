@@ -40,6 +40,7 @@ function RegisterPage(props) {
                 <input type="password" name="confirm-password" size="30" placeholder="Confirm password"></input>
                 <button>Create Account</button>
             </form>
+            <p>Already have an account?<div>Login</div></p>
         </div>
     );
 }
