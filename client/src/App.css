@@ -89,7 +89,14 @@
   transition: .5s;
 }
 
+.redirect-link {
+  color: #9c27b0;
+  text-decoration: none;
+}
 
+.redirect-link:hover {
+  color: #cfa4f0;
+}
 
 
 /* Container for chat layout */

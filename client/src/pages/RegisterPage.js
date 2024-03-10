@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 function RegisterPage(props) {
     const [formData, setFormData] = useState({
@@ -40,7 +41,7 @@ function RegisterPage(props) {
                 <input type="password" name="confirm-password" size="30" placeholder="Confirm password"></input>
                 <button>Create Account</button>
             </form>
-            <p>Already have an account?<div>Login</div></p>
+            <p>Already have an account? <Link to={"/login"} className='redirect-link'>Login</Link></p>
         </div>
     );
 }
