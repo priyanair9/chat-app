@@ -5,6 +5,7 @@ function ChatsPage(props) {
         <div className="chat-container">
         {/* Sidebar for chats */}
         <div className="sidebar">
+            <h3 className='title'>Chats</h3>
           <div className="search-bar">
             <input type="text" placeholder="Search chats"></input>
           </div>

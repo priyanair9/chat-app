@@ -105,6 +105,12 @@
   border-right: 1px solid #9c27b0; /* Purple */
 }
 
+.sidebar .title {
+  text-align: left;
+  margin-left: 5%;
+  font-size: x-large;
+}
+
 /* Search bar */
 .search-bar {
   padding: 10px;
@@ -135,7 +141,7 @@
 /* Chat header */
 .chat-header {
   padding-bottom: 10px;
-  border-bottom: 1px solid #9c27b0; /* Purple */
+  border-bottom: 0.5px solid #A19F9F; /* Purple */
 }
 
 /* Messages area */
