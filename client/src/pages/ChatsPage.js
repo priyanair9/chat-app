@@ -1,4 +1,6 @@
 import React from 'react';
+import AddIcon from '@mui/icons-material/Add';
+import SearchIcon from '@mui/icons-material/Search';
 
 function ChatsPage(props) {
     return (
@@ -6,8 +8,10 @@ function ChatsPage(props) {
         {/* Sidebar for chats */}
         <div className="sidebar">
             <h3 className='title'>Chats</h3>
+            <AddIcon className='new-chat-button'/>
           <div className="search-bar">
-            <input type="text" placeholder="Search chats"></input>
+            <input type="text" placeholder="Search Chats"></input>
+            <SearchIcon/>
           </div>
           <div className="chat-list">
             {/*  List of chats */}
