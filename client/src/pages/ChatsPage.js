@@ -7,11 +7,13 @@ function ChatsPage(props) {
         <div className="chat-container">
         {/* Sidebar for chats */}
         <div className="sidebar">
-            <h3 className='title'>Chats</h3>
-            <AddIcon className='new-chat-button'/>
+            <div className="sidebar-header">
+                <h3 className='title'>Chats</h3>
+                <AddIcon className='new-chat-button' />
+            </div>
           <div className="search-bar">
             <input type="text" placeholder="Search Chats"></input>
-            <SearchIcon/>
+            <SearchIcon className='search-icon' style={{ color: 'A19F9F' }}/>
           </div>
           <div className="chat-list">
             {/*  List of chats */}
