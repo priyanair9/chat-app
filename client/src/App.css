@@ -127,6 +127,15 @@
   font-size: x-large;
 }
 
+.new-chat-button {
+  transition: .3s;
+}
+
+.new-chat-button:hover {
+  color: #9c27b0 !important;
+  transition: .3s;
+}
+
 /* Search bar */
 .search-bar {
   padding: 10px;
@@ -153,6 +162,12 @@
   right: 8px; /* Adjust to align with the right edge of the input */
   transform: translateY(-50%); /* Center vertically */
   cursor: pointer;
+  transition: .3s;
+}
+
+.search-icon:hover {
+  color: #9c27b0 !important;
+  transition: .3s;
 }
 
 /* Chat list */
