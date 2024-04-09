@@ -1,6 +1,7 @@
 import React from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
+import ChatCard from '../components/ChatCard'
 
 function ChatsPage(props) {
     return (
@@ -18,6 +19,7 @@ function ChatsPage(props) {
           <div className="chat-list">
             {/*  List of chats */}
             {/* <!-- Each chat item should contain profile picture, name, last message, etc. --> */}
+            <ChatCard/>
           </div>
         </div>
         {/* <!-- Main chat area --> */}
