@@ -112,6 +112,8 @@
   border-right: 0.5px solid #A19F9F;
   display: flex;
   flex-direction: column;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .sidebar-header {
@@ -235,6 +237,14 @@
   border: solid 1px;
   border-radius: 20px;
   transition: .2s;
+  display: flex;
+  padding: 1%;
+  flex-direction: row;
+}
+
+.card-content {
+  flex: 1;
+  background-color: #cfa4f0;
 }
 
 .card-container:hover {
@@ -257,6 +267,9 @@
   width: 50px;
   border-radius: 50%;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 .abreviation {
