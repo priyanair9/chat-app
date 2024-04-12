@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "username": "random.user",
+        "profileColour": "#2B70B0"
+    },
+    {
+        "id": 2,
+        "username": "tinkerbelle",
+        "profileColour": "#2BB088"
+    },
+    {
+        "id": 3,
+        "username": "snow_white",
+        "profileColour": "#B02B2B"
+    },
+    {
+        "id": 4,
+        "username": "ariel.mermaid",
+        "profileColour": "#B282EF"
+    }
+]

@@ -259,6 +259,7 @@
 .last-message {
   color: #606060;
   font-weight: 300;
+  align-self: baseline;
 }
 
 .profile-pic {
