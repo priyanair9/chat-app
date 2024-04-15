@@ -2,6 +2,7 @@ import React from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 import ChatCard from '../components/ChatCard'
+import MessageBubble from '../components/MessageBubble';
 
 function ChatsPage(props) {
     return (
@@ -31,6 +32,7 @@ function ChatsPage(props) {
           {/* <!-- Chat messages --> */}
           <div className="messages">
             {/* <!-- Individual message bubbles --> */}
+            <MessageBubble/>
           </div>
           {/* <!-- Message input area --> */}
           <div className="message-input">

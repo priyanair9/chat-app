@@ -262,6 +262,20 @@
   align-self: baseline;
 }
 
+.bubble-container {
+  /* background-color: #cfa4f0;
+  padding: 7px 1px 7px 1px;
+  text-align: left;
+  max-width: 75%;
+  position: absolute; */
+    background: #f1f1f1;
+    color: #000 !important;
+    border-radius: 10px 10px 10px 0px;
+    max-width: 75%;
+    padding: 2px 4px 2px 4px;
+    position: absolute;
+}
+
 .profile-pic {
   background-color: #2B70B0;
   height: 50px;
