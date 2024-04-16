@@ -32,7 +32,7 @@ function ChatsPage(props) {
           {/* <!-- Chat messages --> */}
           <div className="messages">
             {/* <!-- Individual message bubbles --> */}
-            <MessageBubble/>
+            <MessageBubble message={"Test"}/>
           </div>
           {/* <!-- Message input area --> */}
           <div className="message-input">

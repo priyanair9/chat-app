@@ -1,9 +1,9 @@
 import React from 'react';
 
-function MessageBubble(props) {
+function MessageBubble({message}) {
     return (
         <div className='bubble-container'>
-            <p className='message'>Hello</p>
+            <p className='message'>{message}</p>
         </div>
     );
 }
