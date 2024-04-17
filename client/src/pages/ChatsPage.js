@@ -28,6 +28,10 @@ function ChatsPage(props) {
           {/* <!-- Chat header with user details --> */}
           <div className="chat-header">
             {/* <!-- Display user's profile picture, name, status, etc. --> */}
+            <div className='profile-pic'>
+                <p className='abreviation'>R</p>
+            </div>
+            <div className='header-username'>random.user</div>
           </div>
           {/* <!-- Chat messages --> */}
           <div className="messages">

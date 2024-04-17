@@ -192,6 +192,15 @@
   border-bottom: 0.5px solid #A19F9F; /* Purple */
 }
 
+.header-username {
+  text-align: left;
+  margin-left: 70px;
+  position: relative;
+  display: flex;
+  font-weight: 500;
+  font-size: 20px;
+}
+
 /* Messages area */
 .messages {
   overflow-y: auto;
