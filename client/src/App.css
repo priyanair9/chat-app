@@ -305,3 +305,33 @@
   font-size: 25px;
   position: relative;
 }
+
+.homepage-content .login {
+  color: white;
+  background-color: #9c27b0;
+  border: solid 1px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.homepage-content .login:hover {
+  background-color: #4a148c;
+  transition: .3s;
+}
+
+.homepage-content .register {
+  color: #9c27b0;
+  background-color: white;
+  border: solid 1px #9c27b0;
+  padding: 10px;
+  border-radius: 10px;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.homepage-content .register:hover {
+  color: white;
+  background-color: #9c27b0;
+}
