@@ -196,7 +196,7 @@
 }
 
 .header-username {
-  margin-left: 10px; /* Adjust margin between profile pic and username */
+  margin-left: 15px; /* Adjust margin between profile pic and username */
   font-weight: 500;
   font-size: 20px;
 }
