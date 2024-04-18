@@ -190,7 +190,7 @@
 /* Chat header */
 .chat-header {
   padding-bottom: 10px;
-  border-bottom: 0.5px solid #A19F9F; /* Purple */
+  border-bottom: 0.5px solid #A19F9F;
   display: flex; /* Use flexbox */
   align-items: center; /* Align items vertically */
 }
