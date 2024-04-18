@@ -157,6 +157,7 @@
   outline: none;
   margin-right: 8px;
   padding-right: 20px; /* Adjust to leave space for the icon */
+  caret-color: #9c27b0;
 }
 
 .search-icon {
@@ -190,13 +191,12 @@
 .chat-header {
   padding-bottom: 10px;
   border-bottom: 0.5px solid #A19F9F; /* Purple */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
 }
 
 .header-username {
-  text-align: left;
-  margin-left: 70px;
-  position: relative;
-  display: flex;
+  margin-left: 10px; /* Adjust margin between profile pic and username */
   font-weight: 500;
   font-size: 20px;
 }
