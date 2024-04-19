@@ -314,6 +314,7 @@
   border-radius: 10px;
   transition: .3s;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .homepage-content .login:hover {
@@ -329,6 +330,7 @@
   border-radius: 10px;
   transition: .3s;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .homepage-content .register:hover {
