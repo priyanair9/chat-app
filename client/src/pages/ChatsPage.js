@@ -5,13 +5,20 @@ import ChatCard from '../components/ChatCard'
 import MessageBubble from '../components/MessageBubble';
 
 function ChatsPage(props) {
+
+  const handleAddButtonClick = (event) => {
+    //create function here
+  }
+
     return (
         <div className="chat-container">
         {/* Sidebar for chats */}
         <div className="sidebar">
             <div className="sidebar-header">
                 <h3 className='title'>Chats</h3>
-                <AddIcon className='new-chat-button' />
+                <div>
+                  <AddIcon className='new-chat-button' />
+                </div>
             </div>
           <div className="search-bar">
             <input type="text" placeholder="Search Chats"></input>
