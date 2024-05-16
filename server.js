@@ -1,4 +1,5 @@
 const express = require('express');
+const router = express.Router()
 const mongoose = require('mongoose');
 const cors = require('cors');
 const User = require('./models/User'); // Import the User model
@@ -63,7 +64,15 @@ app.post('/register', async (req, res) => {
     }
   });
 
+//route for getting all users
+router.route('/users').get((req, res) => {
+  User.find()
+  .then(foundUsers => {res.json(foundUsers)})
+})
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = router

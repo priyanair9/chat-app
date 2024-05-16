@@ -1,13 +1,13 @@
 import React from 'react';
 
-function ResultCard(props) {
+function ResultCard(username, abreviation, color) {
     return (
         <div className='card-container'>
-            <div className='profile-pic'>
-                <p className='abreviation'>R</p>
+            <div className='profile-pic' style={{backgroundColor: {color}}}>
+                <p className='abreviation'>{abreviation}</p>
             </div>
             <div className='card-content'>
-                <p className='username-search'>random.user</p>
+                <p className='username-search'>{username}</p>
             </div>
         </div>
     );

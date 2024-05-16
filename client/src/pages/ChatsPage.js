@@ -3,6 +3,7 @@ import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 import ChatCard from '../components/ChatCard'
 import MessageBubble from '../components/MessageBubble';
+import UserSearch from '../components/UserSearch';
 
 function ChatsPage(props) {
 
@@ -16,7 +17,7 @@ function ChatsPage(props) {
         <div className="sidebar">
             <div className="sidebar-header">
                 <h3 className='title'>Chats</h3>
-                <div>
+                <div onClick={handleAddButtonClick}>
                   <AddIcon className='new-chat-button' />
                 </div>
             </div>
@@ -44,6 +45,7 @@ function ChatsPage(props) {
           <div className="messages">
             {/* <!-- Individual message bubbles --> */}
             <MessageBubble message={"Test"}/>
+            <UserSearch/>
           </div>
           {/* <!-- Message input area --> */}
           <div className="message-input">
