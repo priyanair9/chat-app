@@ -305,6 +305,16 @@
   align-self: center;
 }
 
+.search-profile-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
 .abreviation {
   color: white;
   font-size: 25px;

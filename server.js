@@ -64,11 +64,15 @@ app.post('/register', async (req, res) => {
     }
   });
 
-//route for getting all users
-router.route('/users').get((req, res) => {
-  User.find()
-  .then(foundUsers => {res.json(foundUsers)})
-})
+// Define a route to fetch all users
+app.get('/users', async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 
 // Start server
 app.listen(PORT, () => {
