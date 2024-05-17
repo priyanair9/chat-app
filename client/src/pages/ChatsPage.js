@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 import ChatCard from '../components/ChatCard'
@@ -7,8 +7,12 @@ import UserSearch from '../components/UserSearch';
 
 function ChatsPage(props) {
 
+  // State to manage visibility of UserSearch
+  const [showUserSearch, setShowUserSearch] = useState(false);
+
   const handleAddButtonClick = (event) => {
-    //create function here
+    // Toggle the visibility of UserSearch
+    setShowUserSearch(!showUserSearch);
   }
 
     return (
@@ -29,6 +33,7 @@ function ChatsPage(props) {
             {/*  List of chats */}
             {/* <!-- Each chat item should contain profile picture, name, last message, etc. --> */}
             <ChatCard/>
+            {showUserSearch && <UserSearch />} {/* Conditionally render UserSearch */}
           </div>
         </div>
         {/* <!-- Main chat area --> */}
@@ -45,7 +50,6 @@ function ChatsPage(props) {
           <div className="messages">
             {/* <!-- Individual message bubbles --> */}
             <MessageBubble message={"Test"}/>
-            <UserSearch/>
           </div>
           {/* <!-- Message input area --> */}
           <div className="message-input">
