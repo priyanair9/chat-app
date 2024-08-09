@@ -132,7 +132,7 @@ const getUserProfile = async (request, response) => {
 
 const registerUser = async (request, response) => {
     try {
-      const { username, password, email, colour } = request.body;
+      const { username, password, email } = request.body;
   
       // Check if the username is already taken
       const existingUser = await User.findOne({ username });
@@ -148,12 +148,15 @@ const registerUser = async (request, response) => {
       // Hash the password so that it's saved as a hash in the database
       const passwordHash = await bcrypt.hash(password, 10);
   
+      // Generate random color
+      const profileColor = getRandomColor();
+
       // Create a new user
       const newUser = new User({
         username,
         password: passwordHash,
         email,
-        colour,
+        profileColor,
       });
   
       // Save the new user to the database
@@ -169,7 +172,6 @@ const registerUser = async (request, response) => {
       response.status(500).json({ error: "An error occurred" });
     }
   };
-  
 
 
 module.exports = { validUser, getUser, loginUser, getUserProfile, registerUser }
