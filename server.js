@@ -3,6 +3,7 @@ const router = express.Router()
 const mongoose = require('mongoose');
 const cors = require('cors');
 const User = require('./models/User'); // Import the User model
+const auth = require('./controllers/auth')
 require('dotenv').config();
 
 const app = express();
@@ -33,36 +34,38 @@ db.once('open', () => {
 
 // Routes
 // Add routes for authentication, user registration, and chat
-const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
+// const getRandomColor = () => {
+//     const letters = '0123456789ABCDEF';
+//     let color = '#';
+//     for (let i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+//   };
   
-app.post('/register', async (req, res) => {
-    try {
-      const { email, username, password } = req.body;
+// app.post('/register', async (req, res) => {
+//     try {
+//       const { email, username, password } = req.body;
   
-      // Generate random color
-      const profileColor = getRandomColor();
+//       // Generate random color
+//       const profileColor = getRandomColor();
   
-      const newUser = new User({
-        email,
-        username,
-        password,
-        profileColor, // Assign the random color
-      });
+//       const newUser = new User({
+//         email,
+//         username,
+//         password,
+//         profileColor, // Assign the random color
+//       });
   
-      const savedUser = await newUser.save();
-      res.status(201).json(savedUser);
-    } catch (error) {
-      console.error('Error registering user:', error);
-      res.status(500).json({ message: 'Internal server error' });
-    }
-  });
+//       const savedUser = await newUser.save();
+//       res.status(201).json(savedUser);
+//     } catch (error) {
+//       console.error('Error registering user:', error);
+//       res.status(500).json({ message: 'Internal server error' });
+//     }
+//   });
+
+  app.post('/register', auth.registerUser)
 
 // Define a route to fetch all users
 app.get('/users', async (req, res) => {

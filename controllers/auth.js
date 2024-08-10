@@ -1,4 +1,4 @@
-const models = require('../models')
+const models = require('../models/User')
 const User = require('../models/User')
 const bcrypt = require('bcrypt')
 
@@ -51,7 +51,7 @@ const getUser = async (request, response) => {
         const token = authHeader.substring(6)
         try {
             // this will throw an error if token isn't of the right format
-            const match = await models.User.findById(token)  
+            const match = await User.findById(token)  
             if (match) {
                 response.json({
                     status: "success",
@@ -75,7 +75,7 @@ const validUser = async (request, reponse) => {
         }
         if (authHeader && authHeader.toLowerCase().startsWith('basic ')) {
             const token = authHeader.substring(6)        
-            const match = await models.User.findOne({_id: token})  
+            const match = await User.findOne({_id: token})  
 
             if (match) {
                 return match
@@ -89,7 +89,7 @@ const getUserProfile = async (request, response) => {
     const authHeader = request.get('Authorization')
     const profile = request.params.id
     if (authHeader && authHeader.toLowerCase().startsWith('basic ')) {
-        const match = await models.User.findOne({username: profile})  
+        const match = await User.findOne({username: profile})  
         if (match) {
             response.json({
                 username: match.username,
@@ -129,6 +129,15 @@ const getUserProfile = async (request, response) => {
 //         }
 //     }
 // }
+
+const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
 
 const registerUser = async (request, response) => {
     try {
